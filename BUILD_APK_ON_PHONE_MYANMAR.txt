@@ -1,0 +1,14 @@
+APK ကို ဖုန်းတစ်လုံးတည်းနဲ့ တည်ဆောက်ရန် (GitHub Actions)
+
+မှတ်ချက် - ဒီ ZIP ထဲမှာ APK အဆင်သင့် မပါသေးပါ။ GitHub က အခမဲ့ build လုပ်ပြီး APK ကို ထုတ်ပေးဖို့ workflow ထည့်ထားပါတယ်။
+
+၁။ GitHub အကောင့်ရှိရပါမယ်။ Browser မှာ https://github.com ကိုဖွင့်ပြီး sign in လုပ်ပါ။
+၂။ New repository ဖန်တီးပါ။ နာမည်ကို NumberListKeyboard လို့ပေးပြီး Public သို့မဟုတ် Private ရွေးပါ။
+၃။ ZIP ကိုဖုန်းမှာ extract လုပ်ပါ။ အတွင်းက NumberListKeyboard ဖိုလ်ဒါထဲရှိ ဖိုင်/ဖိုလ်ဒါအားလုံးကို repository ရဲ့ root ထဲ upload လုပ်ပါ။ .github ဖိုလ်ဒါလည်း ပါရပါမယ်။ ZIP တစ်ခုလုံးကို ZIP အဖြစ်တင်ထားရုံနဲ့ မလုံလောက်ပါ။
+၄။ Upload လုပ်ပြီး main branch ထဲ commit လုပ်ပါ။
+၅။ Repository ထဲက Actions tab ကိုဖွင့်ပါ။ “Build Number List Keyboard APK” workflow ကိုရွေးပြီး “Run workflow” ကိုနှိပ်ပါ။ (push လုပ်ပြီးသားဆို အလိုအလျောက်လည်း စတင်နိုင်ပါတယ်။)
+၆။ Build ပြီးသွားရင် အစိမ်းရောင်အမှတ်ပါ workflow run ကိုဖွင့်ပါ။ အောက်ဘက် Artifacts မှာ NumberListKeyboard-debug-apk ကိုနှိပ်ပြီး ZIP artifact ကိုဒေါင်းပါ။
+၇။ Artifact ZIP ကို extract လုပ်ပြီး app-debug.apk ကိုနှိပ်တပ်ဆင်ပါ။ Android က ခွင့်ပြုချက်တောင်းလျှင် ဒီဖိုင်မန်နေဂျာ/Browser မှ install လုပ်ခွင့်ပေးပါ။
+၈။ App ကိုဖွင့်ပြီး keyboard ကို Enable လုပ်ပါ၊ ပြီးရင် Choose keyboard ကိုနှိပ်ရွေးပါ။
+
+သတိ - APK ကို GitHub Actions က build လုပ်ပေးတာဖြစ်ပြီး ဒီ ZIP ကိုယ်တိုင် APK မဟုတ်ပါ။ Workflow error ဖြစ်ရင် Actions မှာပြတဲ့ error ကို screenshot ပို့ပါ။
